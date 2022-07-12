@@ -1,0 +1,24 @@
+# permissions for end users to edit poolcoordinators.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: poolcoordinator-editor-role
+rules:
+- apiGroups:
+  - apiextensions.k8s.io.apps.openyurt.io
+  resources:
+  - poolcoordinators
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - apiextensions.k8s.io.apps.openyurt.io
+  resources:
+  - poolcoordinators/status
+  verbs:
+  - get

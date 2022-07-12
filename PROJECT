@@ -1,0 +1,16 @@
+domain: apps.openyurt.io
+layout:
+- go.kubebuilder.io/v3
+projectName: coordinator-controller
+repo: github.com/openyurtio/coordinator-controller
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: apps.openyurt.io
+  group: apiextensions.k8s.io
+  kind: PoolCoordinator
+  path: github.com/openyurtio/coordinator-controller/api/v1beta1
+  version: v1beta1
+version: "3"

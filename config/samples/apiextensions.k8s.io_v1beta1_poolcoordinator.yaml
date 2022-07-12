@@ -1,0 +1,6 @@
+apiVersion: apiextensions.k8s.io.apps.openyurt.io/v1beta1
+kind: PoolCoordinator
+metadata:
+  name: poolcoordinator-sample
+spec:
+  # TODO(user): Add fields here
