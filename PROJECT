@@ -1,0 +1,21 @@
+domain: openyurt.io
+layout:
+- go.kubebuilder.io/v3
+projectName: pool-coordinator
+repo: github.com/openyurtio/pool-coordinator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: openyurt.io
+  group: pool-coordinator
+  kind: PoolCoordinator
+  path: github.com/openyurtio/pool-coordinator/api/v1alpha1
+  version: v1alpha1
+  webhooks:
+    conversion: true
+    defaulting: true
+    validation: true
+    webhookVersion: v1
+version: "3"
